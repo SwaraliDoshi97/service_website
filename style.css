@@ -30,7 +30,7 @@ h2 {
     scroll-margin-top: 120px;
 }
 header {
-    background: linear-gradient(to right, #031d53, #596cab);
+    background:transparent;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@ header.scrolled .nav a {
 
 .logo {
     font-size: 1.5rem;
-    color: #eeebf6;
+    color: #59585a;
     padding: 0.5rem 1rem;
     font-weight: 600;
 }
@@ -83,7 +83,7 @@ header.scrolled .nav a {
     /* color: inherit; */
     font-size: 1.3rem;
     margin: 0.5rem;
-    color: #ece9f3;
+    color: #515054;
     font-weight: 600;
     margin-right: 0.5rem;
      padding-right: 1rem;

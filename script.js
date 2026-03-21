@@ -28,3 +28,15 @@ window.addEventListener("scroll", () => {
         header.classList.remove("scrolled");
     }
 });
+
+function toggleCard(card) {
+    document.querySelectorAll(".card").forEach(c => {
+        if (c !== card) {
+            c.classList.remove("active");
+            c.querySelector(".more-content")?.classList.remove("show");
+        }
+    });
+
+    card.classList.toggle("active");
+    card.querySelector(".more-content").classList.toggle("show");
+}
