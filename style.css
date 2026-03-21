@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: #f2f2f2;
     font-family: 'Poppins', sans-serif;
@@ -33,24 +35,23 @@ header {
     background:transparent;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
     top: 0;
     display: flex;
     justify-content: center;
 
-
+    position:fixed;
+    width: 100%;    
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    max-width: 1400px;
-    width: 90%;
-    border: gray solid 0.5px;
+    padding:0.5rem;
+    max-width: 1300px;
+    width: 100%;
     border-radius: 60px;
+
 }
 
 header.scrolled {
@@ -66,10 +67,14 @@ header.scrolled .logo {
 header.scrolled .nav a {
     color: #150246;
 }
-
+header.scrolled .header-content{
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(31, 31, 31, 0.275) ;
+    
+}
 .logo {
     font-size: 1.5rem;
-    color: #59585a;
+    color: #ede9f1;
     padding: 0.5rem 1rem;
     font-weight: 600;
 }
@@ -80,10 +85,10 @@ header.scrolled .nav a {
 }
 .nav a {
     text-decoration: none;
-    /* color: inherit; */
+    color: inherit;
     font-size: 1.3rem;
     margin: 0.5rem;
-    color: #515054;
+    color: #e8e6ee;
     font-weight: 600;
     margin-right: 0.5rem;
      padding-right: 1rem;
@@ -94,18 +99,19 @@ header.scrolled .nav a {
 }
 
 section {
-    background-color: #fff;
+    background-color: transparent;
     text-align: center;
     padding: 2rem 3.75rem;
     scroll-margin-top: 180px;
-    /* padding-top: 2.5rem; */
+    padding-top: 2.5rem;
 }
 
 .home {
     background: linear-gradient(to right, #031d53, #596cab);
     color: white;
     text-align: center;
-    padding: 6rem 1rem;
+    padding: 15rem;
+   
 }
 
 .home h1 {
@@ -123,9 +129,10 @@ section {
     display: inline-block;
     background-color: white;
     color: #150246;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 50px;
     font-weight: bold;
+    padding-top: 1rem;
 }
 
 .home .btn:hover {
