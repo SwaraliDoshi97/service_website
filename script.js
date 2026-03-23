@@ -40,3 +40,21 @@ function toggleCard(card) {
     card.classList.toggle("active");
     card.querySelector(".more-content").classList.toggle("show");
 }
+
+const words = ["Build", "Digital", "Cloud", "Scalable", "Software"];
+let currentIndex = 0;
+const wordElement = document.getElementById("changing-word");
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % words.length;
+    
+    // Add a fade-out effect
+    wordElement.style.opacity = 0;
+    
+    setTimeout(() => {
+        wordElement.textContent = words[currentIndex];
+        wordElement.style.opacity = 1;
+    }, 500); // Wait for fade out before changing text
+}, 2500);
+
+

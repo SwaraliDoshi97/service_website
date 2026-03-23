@@ -69,7 +69,7 @@ header.scrolled .nav a {
 }
 header.scrolled .header-content{
     background-color: transparent;
-    box-shadow: 0px 0px 10px rgba(31, 31, 31, 0.275) ;
+    box-shadow: 0px 0px 10px rgba(0 0, 0, 0.275) ;
     
 }
 .logo {
@@ -95,11 +95,11 @@ header.scrolled .header-content{
 }
 
 .nav a:hover {
-    color: #5a0aef;
+    color: #11032a;
 }
 
 section {
-    background-color: transparent;
+    background-color: #fff;
     text-align: center;
     padding: 2rem 3.75rem;
     scroll-margin-top: 180px;
@@ -138,7 +138,14 @@ section {
 .home .btn:hover {
     background-color: #150246;
     color: white;
-    transition: 0.3s;
+    transition: 1s ease-in-out;
+}
+#changing-word{
+    color: rgb(46, 241, 241);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-block;
+    min-width: 4rem;
+
 
 }
 
