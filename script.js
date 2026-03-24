@@ -68,9 +68,11 @@ themeBtn.addEventListener('click', () => {
 
     // Change the icon and save preference
     if (body.classList.contains('dark')) {
-        themeIcon.textContent = '☀️'; // Sun icon
+        themeIcon.innerHTML = '<img src="./icons/moon icon.png" alt="Moon">'; // Moon icon
+        themeIcon.querySelector('img').style.animation = 'rise 0.5s ease'; // Rotate the moon icon
     } else {
-        themeIcon.textContent = '🌙'; // Moon icon
+        themeIcon.innerHTML = '<img src="./icons/sun icon.png" alt="Sun">';// Sun icon
+        themeIcon.querySelector('img').style.animation = 'rise 0.5s ease'; 
     }
     
 });
