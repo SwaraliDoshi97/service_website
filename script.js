@@ -41,7 +41,7 @@ function toggleCard(card) {
     card.querySelector(".more-content").classList.toggle("show");
 }
 
-const words = ["Build", "Digital", "Cloud", "Scalable", "Software"];
+const words = [ "Digital", "Scalable", "Software"];
 let currentIndex = 0;
 const wordElement = document.getElementById("changing-word");
 
@@ -57,4 +57,20 @@ setInterval(() => {
     }, 500); // Wait for fade out before changing text
 }, 2500);
 
+const themeBtn = document.getElementById('theme-btn');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
 
+themeBtn.addEventListener('click', () => {
+    // Toggle the light-mode class on the body
+    body.classList.toggle('dark');
+    
+
+    // Change the icon and save preference
+    if (body.classList.contains('dark')) {
+        themeIcon.textContent = '☀️'; // Sun icon
+    } else {
+        themeIcon.textContent = '🌙'; // Moon icon
+    }
+    
+});

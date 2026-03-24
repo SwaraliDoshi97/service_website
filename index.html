@@ -12,21 +12,27 @@
         <header>
             <div class="header-content">
                 <div class="logo"> Demo website </div>
-
                 <div class="nav">
                     <a href="#services"> Services </a>
                     <a href="#about"> About </a>
                     <a href="#contact"> Contact </a>
+                    <button id="theme-btn" class="theme-toggle">
+                        <span id="theme-icon"> 🌙 </span>
+                    </button>
                 </div>
             </div>
         </header>
-        
+
         <main>
+
             <section class="home">
-                <div>
-                    <h1>Not Just Code.We <span id="changing-word"> Build </span> Digital Solutions </h1>
-                    <p> Modern Web, Cloud & Software Services for Growing Businesses. </p>
-                    <a href="#contact" class="btn"> Get a Quote </a>
+                <div class="home-content">
+                    <div class="head">
+                        <span class="underline"> Not Just <span class="highlight"> Code </span>.
+                            We <span class="box"> Build </span> </span> Growth Engines.
+                    </div>
+                    <div class="make"> Make It Happen
+                    </div>
                 </div>
             </section>
 
@@ -107,22 +113,22 @@
                     </div>
                 </div>
             </section>
+
             <section class="about" id="about">
-                <h2 id="title"> About Us </h2>
+                <h2> About Us </h2>
                 <P> IT Web services provides modern web, cloud and software services for growing businesses. </P>
-                <p>
-                    Our team combines creativity, engineering expertise, and strategic thinking to ensure measurable
+                <p> Our team combines creativity, engineering expertise, and strategic thinking to ensure measurable
                     results for every client.
                 </p>
             </section>
 
             <section class="contact" id="contact">
-                <h2 id="title"> Contact Us </h2>
+                <h2> Contact Us </h2>
                 <form>
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
-                    <button type="submit"> Send Message </button>
+                    <button type="submit" id="btn"> Send Message </button>
                 </form>
             </section>
         </main>
