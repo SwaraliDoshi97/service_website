@@ -60,7 +60,7 @@ header {
     width: 100%;    
     transition: 0.4s;
     z-index: 1000;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 
 .header-content {
@@ -80,6 +80,7 @@ header.scrolled {
 header.scrolled .header-content{
     background-color: var(--bg-color);
     color: var(--text-color);
+    box-shadow:  inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .logo {
     font-size: 1.5rem;
@@ -91,8 +92,13 @@ header.scrolled .header-content{
 .nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     /* gap: 1.5rem;
     padding-right: 2rem;  */
+}
+
+.nav div {
+    margin: 0 0.5rem;
 }
 .nav a {
     color: var(--text-color);
@@ -117,11 +123,9 @@ header.scrolled .header-content{
     align-items: center;
     transition: trasnform 0.1s ease;
 }
-#theme-icon{
-    display: inline-block;
-}
 
-#theme-icon img{
+
+#theme-btn img{
     width: 30px;
     height: 30px;
 }
@@ -134,6 +138,7 @@ header.scrolled .header-content{
     align-items: center;
     padding: 2rem;
     min-height: 100vh;
+    z-index: 1;
 }
 
 .home .head {
@@ -168,7 +173,7 @@ header.scrolled .header-content{
 
 .window span {
     display: block;
-    animation: slide 8s ease infinite alternate-reverse;
+    animation: slide 15s ease infinite alternate-reverse;
     height: 4.3rem;
 }
 
@@ -177,9 +182,42 @@ header.scrolled .header-content{
 }
 .box{
     background-color: var(--build-bg);
-    color: var(--build-text);
+    color: var(--section-bg);
     font-style: italic;
     padding: 0 1rem;
+}
+
+.make {
+    color: var(--nav-hover);
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-top: 20rem;
+    margin-left: 2rem;
+    z-index: 3;
+    cursor: pointer;
+    position: relative;
+}
+
+.make::after{
+    content: '';
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-90%,-10%);
+    width: 20rem;
+    height: 3rem;
+    border-radius: 8px;
+    background-color: var(--build-text);
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+    margin-top: 0.5rem;
+}
+
+.make:hover::after {
+    background-color: var(--code-color);
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 h2 {

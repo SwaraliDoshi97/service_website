@@ -58,7 +58,6 @@ setInterval(() => {
 }, 2500);
 
 const themeBtn = document.getElementById('theme-btn');
-const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
 themeBtn.addEventListener('click', () => {
@@ -68,11 +67,11 @@ themeBtn.addEventListener('click', () => {
 
     // Change the icon and save preference
     if (body.classList.contains('dark')) {
-        themeIcon.innerHTML = '<img src="./icons/moon icon.png" alt="Moon">'; // Moon icon
-        themeIcon.querySelector('img').style.animation = 'rise 0.5s ease'; // Rotate the moon icon
+        themeBtn.innerHTML = '<img src="./icons/moon icon.png" alt="Moon">'; // Moon icon
+        themeBtn.querySelector('img').style.animation = 'rise 0.5s ease'; // Rotate the moon icon
     } else {
-        themeIcon.innerHTML = '<img src="./icons/sun icon.png" alt="Sun">';// Sun icon
-        themeIcon.querySelector('img').style.animation = 'rise 0.5s ease'; 
+        themeBtn.innerHTML = '<img src="./icons/sun icon.png" alt="Sun">';// Sun icon
+        themeBtn.querySelector('img').style.animation = 'rise 0.5s ease'; 
     }
     
 });
