@@ -20,7 +20,7 @@ toggleButtons.forEach(button => {
 });
 
 window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");    
+    const header = document.querySelector("header");
 
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
@@ -41,37 +41,49 @@ function toggleCard(card) {
     card.querySelector(".more-content").classList.toggle("show");
 }
 
-const words = [ "Digital", "Scalable", "Software"];
-let currentIndex = 0;
-const wordElement = document.getElementById("changing-word");
+// const words = [ "Digital", "Scalable", "Software"];
+// let currentIndex = 0;
+// const wordElement = document.getElementById("changing-word");
 
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % words.length;
-    
-    // Add a fade-out effect
-    wordElement.style.opacity = 0;
-    
-    setTimeout(() => {
-        wordElement.textContent = words[currentIndex];
-        wordElement.style.opacity = 1;
-    }, 500); // Wait for fade out before changing text
-}, 2500);
+// setInterval(() => {
+//     currentIndex = (currentIndex + 1) % words.length;
+
+//     // Add a fade-out effect
+//     wordElement.style.opacity = 0;
+
+//     setTimeout(() => {
+//         wordElement.textContent = words[currentIndex];
+//         wordElement.style.opacity = 1;
+//     }, 500); // Wait for fade out before changing text
+// }, 2500);
 
 const themeBtn = document.getElementById('theme-btn');
 const body = document.body;
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+    body.classList.add('dark');
+    themeBtn.innerHTML = '<img src="./icons/moon icon.png" alt="Moon">';
+} else {
+    themeBtn.innerHTML = '<img src="./icons/sun icon.png" alt="Sun">';
+}
 
 themeBtn.addEventListener('click', () => {
     // Toggle the light-mode class on the body
     body.classList.toggle('dark');
     
-
     // Change the icon and save preference
     if (body.classList.contains('dark')) {
         themeBtn.innerHTML = '<img src="./icons/moon icon.png" alt="Moon">'; // Moon icon
-        themeBtn.querySelector('img').style.animation = 'rise 0.5s ease'; // Rotate the moon icon
+        localStorage.setItem('theme', 'dark');
     } else {
         themeBtn.innerHTML = '<img src="./icons/sun icon.png" alt="Sun">';// Sun icon
-        themeBtn.querySelector('img').style.animation = 'rise 0.5s ease'; 
+        localStorage.setItem('theme', 'light');
     }
-    
+
+    const img = themeBtn.querySelector('img');
+    if (img) {
+        img.style.animation = 'rise 0.5s ease';
+    }
 });
