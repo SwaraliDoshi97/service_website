@@ -141,12 +141,12 @@ header.scrolled .header-content{
     z-index: 1;
 }
 
-.home .head {
+/* .home .head {
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-}
+} */
 
 .home .head {
     color: var(--heading-color);
@@ -156,6 +156,10 @@ header.scrolled .header-content{
     margin-bottom: 1.5rem;
     white-space: nowrap;
     height: 5rem;
+
+    padding-top: 12rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .underline {
